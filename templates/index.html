@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Support Router</title>
+</head>
+<body>
+    <h1>AI Support System</h1>
+
+    <form method="post" action="/submit">
+        <textarea name="message" rows="5" cols="50" placeholder="Enter your message"></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <hr>
+        <h3>Result</h3>
+        <p><b>Message:</b>"{{ result.message }}"  </p>
+        <p><b>Category:</b> {{ result.category }}</p>
+        <p><b>Decision:</b> {{ result.decision }}</p>
+    {% endif %}
+</body>
+</html>
